@@ -33,9 +33,9 @@ class mydata_load(object):
             df = pd.DataFrame(csvlist)
         
         
-        #newdict = {key:df[key] for key in ['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','START','END','WEEK','COUNTER_NAME','COMPLETED']}
+        newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','START','END','WEEK','COUNTER_NAME','COMPLETED']]
         
-        return df
+        return newdata
 # 
 
         
