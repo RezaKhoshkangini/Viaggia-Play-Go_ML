@@ -33,8 +33,8 @@ class mydata_load(object):
             df = pd.DataFrame(csvlist)
         
         
-        newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','START','END','WEEK','COUNTER_NAME','COMPLETED']]
-        
+        #newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','START','END','WEEK','COUNTER_NAME','COMPLETED']]
+        newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','COUNTER_NAME','COMPLETED']]
         return newdata
 # 
 
