@@ -9,6 +9,7 @@ Created on Dec 6, 2017
 
 
 def Label_encode(df,columns):
+    OldData=df
     for col in columns:
         le = preprocessing.LabelEncoder()
         col_values_unique = list(df[col].unique())
@@ -19,4 +20,4 @@ def Label_encode(df,columns):
         col_values_transformed = le.transform(col_values)
         df[col] = col_values_transformed    
         
-    print(df)
+    return df

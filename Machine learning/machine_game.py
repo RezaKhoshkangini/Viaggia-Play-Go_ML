@@ -27,12 +27,13 @@ def machine_game(mydata):
         # to find missing values
         print(mydata_data.isnull().sum())
         mycolumns=['MODEL_NAME','COUNTER_NAME','COMPLETED']
-        testt=Label_encode(mydata_data,mycolumns)
+        # converting nominal data to numerical
+        labeled_data=Label_encode(mydata_data,mycolumns)
         
         X=mydata_data.iloc[:, mydata_data.columns !='COMPLETED']
         y=mydata_data.iloc[:,-1]
         
-        train, test, train_labels, test_labels=train_test_split(X, y, train_size=11, test_size=3, random_state=10)
+        train, test, train_labels, test_labels=train_test_split(X, y, train_size=10, test_size=3, random_state=10)
         # Initialize our classifier
         model2=my_classifier(train, train_labels,test, test_labels)
         

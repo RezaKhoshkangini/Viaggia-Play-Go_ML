@@ -35,6 +35,7 @@ class mydata_load(object):
         
         #newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','START','END','WEEK','COUNTER_NAME','COMPLETED']]
         newdata = df[['PLAYER_ID', 'MODEL_NAME','TARGET','BONUS_SCORE','COUNTER_NAME','COMPLETED']]
+        newdata=newdata[(newdata.MODEL_NAME == 'absoluteIncrement')|(newdata.MODEL_NAME=='percentageIncrement')]
         return newdata
 # 
 
